@@ -1,0 +1,36 @@
+<ion-content>
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let slide of sliders" text-center>
+      <div class="slide-img-padding">
+        <img [src]="slide.img" class="slide-img" />
+      </div>
+      <div>
+        <h3 [innerHTML]="slide.contenido"></h3>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <ion-row>
+    <!-- CUANDO DE CLIK EN EL BOTON STATE SERIA 1 SI NO NO EXISTE -->
+    <ion-col size="10" offset="1">
+      <ion-button
+        color="primary"
+        expand="full"
+        shape="round"
+        class="btn-primary"
+        mode="ios"
+        (click)="abrirMareto()"
+      >
+        Quiero entrar
+      </ion-button>
+    </ion-col>
+    <ion-col size="6" offset="3">
+      <ion-button expand="full" fill="clear">
+        <ion-label color="dark">¿Como me uno</ion-label>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
+<ion-footer no-border text-center>
+  <ion-grid fixed> </ion-grid>
+</ion-footer>
